@@ -1,4 +1,4 @@
-package SS02.bai_tap;
+package ss02.bai_tap;
 
 public class DisplayPrimesLessThan100 {
     public static void main(String[] args) {

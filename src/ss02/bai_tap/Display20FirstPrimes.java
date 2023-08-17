@@ -1,4 +1,4 @@
-package SS02.bai_tap;
+package ss02.bai_tap;
 
 public class Display20FirstPrimes {
     public static void main(String[] args) {
