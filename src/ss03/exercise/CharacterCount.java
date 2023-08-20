@@ -1,5 +1,6 @@
 package ss03.exercise;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CharacterCount {
@@ -7,7 +8,6 @@ public class CharacterCount {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a string: ");
         String string = scanner.nextLine();
-        System.out.println(string);
         System.out.println("Enter the character do you want to count: ");
         char character = scanner.next().charAt(0);
         int count = 0;
