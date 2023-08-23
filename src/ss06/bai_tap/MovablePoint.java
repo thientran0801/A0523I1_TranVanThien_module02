@@ -2,18 +2,20 @@ package ss06.bai_tap;
 
 import java.util.Arrays;
 
-public class MovablePoint extends Point{
+public class MovablePoint extends Point {
     private float xSpeed;
     private float ySpeed;
+
     public MovablePoint() {
 
     }
+
     public MovablePoint(float xSpeed, float ySpeed) {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }
 
-    public MovablePoint(float x, float y,float xSpeed, float ySpeed) {
+    public MovablePoint(float x, float y, float xSpeed, float ySpeed) {
         super(x, y);
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
@@ -41,15 +43,17 @@ public class MovablePoint extends Point{
     }
 
     public float[] getSpeed() {
-        return new float[] {this.xSpeed, this.ySpeed};
+        return new float[]{this.xSpeed, this.ySpeed};
     }
+
     @Override
     public String toString() {
-        return "("+ getX() + ", " + getY() +") , speed = (" + getXSpeed() + ", " + getYSpeed() + ")" ;
+        return "(" + getX() + ", " + getY() + ") , speed = (" + getXSpeed() + ", " + getYSpeed() + ")";
     }
+
     public MovablePoint move() {
-        setX(super.getX()+ this.xSpeed);
-        setY(super.getY()+ this.ySpeed);
+        setX(super.getX() + this.xSpeed);
+        setY(super.getY() + this.ySpeed);
         return this;
     }
 
@@ -66,7 +70,7 @@ public class MovablePoint extends Point{
         movablePoint.setXY(0.5f, 8.5f);
         movablePoint.setXSpeed(0.5f);
         movablePoint.setYSpeed(0.5f);
-        movablePoint.setXY(0.6f,0.78f);
+        movablePoint.setXY(0.6f, 0.78f);
         movablePoint.move();
         System.out.println(movablePoint.getY());
         System.out.println(movablePoint.getX());
