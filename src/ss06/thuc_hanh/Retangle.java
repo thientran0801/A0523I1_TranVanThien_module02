@@ -1,6 +1,8 @@
 package ss06.thuc_hanh;
 
-public class Retangle extends Shape{
+import ss07.bai_tap.Resizeable;
+
+public class Retangle extends Shape implements Resizeable {
     private double width;
     private double length;
 
@@ -13,6 +15,7 @@ public class Retangle extends Shape{
         this.width = width;
         this.length = length;
     }
+
     public Retangle(double width, double length, String color, boolean filled) {
         super(color, filled);
         this.width = width;
@@ -36,14 +39,21 @@ public class Retangle extends Shape{
     }
 
     public double getArea() {
-        return width*length;
+        return width * length;
     }
+
     public double getPerimeter() {
-        return 2*(width + length);
+        return 2 * (width + length);
     }
 
     @Override
     public String toString() {
         return "A rectangle with width = " + getWidth() + " and length = " + getLength() + ", which is a subclass of " + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        setLength(this.length * percent / 100);
+        setWidth(this.width * percent / 100);
     }
 }

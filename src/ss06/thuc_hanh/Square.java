@@ -1,6 +1,9 @@
 package ss06.thuc_hanh;
 
-public class Square extends Retangle{
+import ss07.bai_tap.Colorable;
+import ss07.bai_tap.Resizeable;
+
+public class Square extends Retangle implements Resizeable, Colorable {
     public Square(){
     }
     public Square(double side) {
@@ -10,8 +13,8 @@ public class Square extends Retangle{
         super(side, side, color, filled);
     }
     public void setSide(double side) {
-        setWidth(side);
-        setLength(side);
+        super.setWidth(side);
+        super.setLength(side);
     }
     public double getSide() {
         return getWidth();
@@ -29,5 +32,14 @@ public class Square extends Retangle{
     @Override
     public String toString() {
         return "A square with side = " + getSide() + ", which is a subclass of " + super.toString();
+    }
+    @Override
+    public void resize(double percent) {
+        setSide(this.getSide()*percent/100);
+    }
+    @Override
+
+public void howToColor() {
+        System.out.print("Color all four side!...");
     }
 }
