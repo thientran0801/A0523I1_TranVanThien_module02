@@ -46,11 +46,22 @@ public class ProductService implements IProductService {
 
     @Override
     public void update() {
-        productRepository.updateProductList();
+        System.out.println("Enter id to update: ");
+        id = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Enter name: ");
+//        name = scanner.nextLine();
+//        System.out.println("Enter price: ");
+//        price = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Enter describe: ");
+//        describe = scanner.nextLine();
+//        Product product = new Product(id, name, price, describe);
+        productRepository.updateProductList(id);
     }
 
     @Override
     public void search() {
-        productRepository.searchProduct();
+        System.out.println("Enter keyword: ");
+        String keyword = scanner.nextLine();
+        productRepository.searchProduct(keyword);
     }
 }

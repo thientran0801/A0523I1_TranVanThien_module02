@@ -6,6 +6,6 @@ public interface IProductRepository {
     Product[] getListProduct();
     void addProduct(Product product);
     void deleteProductByID(int id);
-    void updateProductList();
-    Product searchProduct();
+    void updateProductList(int id);
+    void searchProduct(String keyword);
 }
