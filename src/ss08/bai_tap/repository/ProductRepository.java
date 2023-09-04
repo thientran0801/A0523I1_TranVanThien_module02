@@ -55,11 +55,9 @@ public class ProductRepository implements IProductRepository{
 
     @Override
     public void searchProduct(String  keyword) {
-        int numberChar = keyword.length();
         for (int i = 0; i < products.length; i++) {
             if (products[i].getName().contains(keyword)) {
                 System.out.println(products[i]);
-                break;
             }
         }
     }
