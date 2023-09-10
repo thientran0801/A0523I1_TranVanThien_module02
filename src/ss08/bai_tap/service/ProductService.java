@@ -7,22 +7,22 @@ import java.util.Scanner;
 
 public class ProductService implements IProductService {
     Scanner scanner = new Scanner(System.in);
-    private int id;
-    private String name;
-    private int price;
-    private String describe;
+//    private int id;
+//    private String name;
+//    private int price;
+//    private String describe;
     private ProductRepository productRepository = new ProductRepository();
 
     @Override
     public void addProduct() {
         System.out.println("Enter id: ");
-        id = Integer.parseInt(scanner.nextLine());
+        int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter name: ");
-        name = scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Enter price: ");
-        price = Integer.parseInt(scanner.nextLine());
+        int price = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter describe: ");
-        describe = scanner.nextLine();
+        String describe = scanner.nextLine();
         Product product = new Product(id, name, price, describe);
         productRepository.addProduct(product);
     }
@@ -40,14 +40,14 @@ public class ProductService implements IProductService {
     @Override
     public void delete() {
         System.out.println("Enter the id you want to delete: ");
-        id = Integer.parseInt(scanner.nextLine());
+        int id = Integer.parseInt(scanner.nextLine());
         productRepository.deleteProductByID(id);
     }
 
     @Override
     public void update() {
         System.out.println("Enter id to update: ");
-        id = Integer.parseInt(scanner.nextLine());
+        int id = Integer.parseInt(scanner.nextLine());
         productRepository.updateProductList(id);
     }
 

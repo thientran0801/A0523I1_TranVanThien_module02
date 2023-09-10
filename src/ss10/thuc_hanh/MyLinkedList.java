@@ -1,5 +1,7 @@
 package ss10.thuc_hanh;
 
+import java.util.LinkedList;
+
 public class MyLinkedList {
 private Node head;
 private int numbNodes = 0;

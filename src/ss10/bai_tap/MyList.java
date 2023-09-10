@@ -18,7 +18,7 @@ public class MyList<E> {
     }
 
     private void ensureCapacity(int minCapacity) {
-        elements = Arrays.copyOf(elements, Math.max(elements.length*2, minCapacity));
+        elements = Arrays.copyOf(elements, Math.max(elements.length*2 + 1, minCapacity));
     }
 
     public void add(int index, E element) {
@@ -80,15 +80,13 @@ public class MyList<E> {
         return (E) elements[index];
     }
 
-//    public MyList<E> clone() {
-//        try {
-//            MyList<E> cloneList = (MyList<E>) super.clone();
-//            cloneList.elements = Arrays.copyOf(elements, size);
-//            return cloneList;
-//        } catch (CloneNotSupportedException e) {
-//            throw new InternalError(e);
-//        }
-//    }
+    public MyList<E> clone() {
+        MyList<E> cloneList = new MyList<>(this.size);
+        for (int i = 0; i < this.size; i++) {
+            cloneList.add((E) this.elements[i]);
+        }
+        return cloneList;
+    }
 }
 
 

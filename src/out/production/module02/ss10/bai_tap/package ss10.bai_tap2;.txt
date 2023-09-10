@@ -1,0 +1,147 @@
+package ss10.bai_tap;
+
+import javax.xml.ws.Holder;
+
+public class MyLinkedList<E> {
+    private Node head;
+    private int numbNode = 0;
+
+    public MyLinkedList() {
+    }
+
+    public int size() {
+        return numbNode;
+    }
+
+    public void addFirst(E data) {
+        Node temp = head;
+        head = new Node(data);
+        head.next = temp;
+        this.numbNode++;
+    }
+
+    public void addLast(E data) {
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = new Node(data);
+        this.numbNode++;
+    }
+
+    public void add(int index, E data) {
+        if (index == 0) {
+            addFirst(data);
+            return;
+        }
+        if (index == numbNode - 1) {
+            addLast(data);
+            return;
+        }
+        Node temp = head;
+        for (int i = 0; i < index - 1 && temp.next != null; i++) {
+            temp = temp.next;
+        }
+        Node holder = temp.next;
+        temp.next = new Node(data);
+        temp.next.next = holder;
+        this.numbNode++;
+    }
+
+    private E removeFirst() {
+        if (head == null) {
+            return null;
+        }
+        E temp = (E) head.getData();
+        head = head.next;
+        numbNode--;
+        return temp;
+    }
+
+    private E removeLast() {
+        if (numbNode == 0) {
+            return null;
+        } else if (numbNode == 1) {
+            removeFirst();
+        } else {
+            Node temp = head;
+            for (int i = 0; i < numbNode - 2; i++) {
+                temp = temp.next;
+            }
+            Node holder = temp.next;
+            temp.next = null;
+            numbNode--;
+            return (E) holder;
+        }
+        return null;
+    }
+
+    public E remove(int indexRemove) {
+        Node holder = null;
+        Node temp = head;
+        if (indexRemove == 0) {
+            removeFirst();
+        } else if (indexRemove == numbNode - 1) {
+            removeLast();
+        } else {
+            for (int i = 0; i < indexRemove - 1; i++) {
+                temp = temp.next;
+            }
+            holder = temp.next;
+            temp.next = temp.next.next;
+            numbNode--;
+        }
+        return (E) holder;
+    }
+
+    public int indexOf(E element) {
+        if (head.getData().equals(element)) {
+            return 0;
+        }else {
+            Node temp = head;
+            for (int i = 1; i < numbNode; i++) {
+                if (temp.next.getData().equals(element)) {
+                    return i;
+                }
+                temp = temp.next;
+            }
+        }
+        return -1;
+    }
+
+    public boolean remove(Object element) {
+        int indexRemove = indexOf((E) element);
+        if (indexRemove == -1){
+            return false;
+        }else if (indexRemove == 0) {
+            head = head.next;
+            numbNode--;
+            return true;
+        }else {
+            Node temp = head;
+            for (int i = 0; i < indexRemove-1; i++) {
+                temp = temp.next;
+            }
+            if (indexRemove == numbNode-1) {
+                temp.next = null;
+            }else {
+                temp.next = temp.next.next;
+            }
+            numbNode--;
+            return true;
+        }
+    }
+
+    private class Node<E> {
+        private Node next;
+        private E data;
+
+        public Node(E data) {
+            this.data = data;
+        }
+
+        public E getData() {
+            return this.data;
+        }
+    }
+}
