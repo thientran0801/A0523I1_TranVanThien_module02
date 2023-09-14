@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class ReverseElement {
+public class ReverseElementByStack {
     public static void main(String[] args) {
         ArrayList<Integer> array = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
