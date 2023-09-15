@@ -14,7 +14,7 @@ public class TreeMapForCount {
 
         String[] array = stringInput.split(" ");
         ArrayList<String> listString = new ArrayList();
-        for (String key: array) {
+        for (String key : array) {
             listString.add(key);
         }
         System.out.println(listString);
@@ -23,14 +23,14 @@ public class TreeMapForCount {
         for (String string : listString) {
             if (stringMap.containsKey(string)) {
                 stringMap.put(string, stringMap.get(string) + 1);
-            }else {
+            } else {
                 stringMap.put(string, 1);
             }
         }
 
         //test
         Set<String> stringSet = stringMap.keySet();
-        for (String string: stringSet) {
+        for (String string : stringSet) {
             System.out.println(string + ": " + stringMap.get(string));
         }
 

@@ -5,6 +5,7 @@ import javax.xml.soap.Node;
 public class ImplementQueue<E> {
     private Node front;
     private Node rear;
+
     public ImplementQueue() {
         this.front = null;
         this.rear = null;
@@ -20,7 +21,7 @@ public class ImplementQueue<E> {
             front = newNode;
             rear = newNode;
             rear.link = front;
-        }else {
+        } else {
             rear.link = newNode;
             rear = newNode;
             rear.link = front;
@@ -35,12 +36,13 @@ public class ImplementQueue<E> {
         if (front == rear) {
             front = null;
             rear = null;
-        }else {
+        } else {
             front = front.link;
             rear.link = front;
         }
 
     }
+
     public void displayQueue() {
         if (isEmpty()) {
             System.out.println("Queue is empty!");
@@ -55,9 +57,10 @@ public class ImplementQueue<E> {
             }
             System.out.print(current.getData() + ", ");
             current = current.link;
-        }while (current != front);
+        } while (current != front);
         System.out.println();
     }
+
     private class Node {
         private E data;
         private Node link;
@@ -66,6 +69,7 @@ public class ImplementQueue<E> {
             this.data = data;
             this.link = null;
         }
+
         public E getData() {
             return this.data;
         }
