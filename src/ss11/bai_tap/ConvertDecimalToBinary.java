@@ -9,13 +9,13 @@ public class ConvertDecimalToBinary {
         Stack<Integer> stack = new Stack<>();
         int decimal = 1;
 
-        while (decimal != -1 ) {
+        while (decimal != -1) {
             System.out.println("Enter a number to convert to BINARY: ");
-            decimal  = scanner.nextInt();
+            decimal = scanner.nextInt();
             System.out.println("DECIMAL: " + decimal);
             while (decimal > 0) {
-                int serplus = decimal%2;
-                decimal = decimal/2;
+                int serplus = decimal % 2;
+                decimal = decimal / 2;
                 stack.push(serplus);
             }
             System.out.print("BINARY: ");
