@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SimpsonSorting {
+public class SimpsonCompareTo {
     public static void main(String[] args) {
         List<Simpson> simpsons = new ArrayList<>();
         simpsons.add(new Simpson("Homer"));
@@ -16,6 +16,8 @@ public class SimpsonSorting {
         Collections.sort(simpsons);
         System.out.println(simpsons.stream().map(s->s.name).collect(Collectors.joining(" ")));
 //        simpsons.stream().map(s->s.name).forEach(System.out::print);
-        System.out.print(" ");
+
+        Collections.reverse(simpsons);
+        System.out.println(simpsons.stream().map(s->s.name).collect(Collectors.joining(" ")));
     }
 }

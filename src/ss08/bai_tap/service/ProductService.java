@@ -7,10 +7,6 @@ import java.util.Scanner;
 
 public class ProductService implements IProductService {
     Scanner scanner = new Scanner(System.in);
-//    private int id;
-//    private String name;
-//    private int price;
-//    private String describe;
     private ProductRepository productRepository = new ProductRepository();
 
     @Override

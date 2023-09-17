@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class ProductController {
     public static void displayMenu() {
         ProductService productService = new ProductService();
-//        boolean isChoice = true;
         int choice = -1;
         Scanner scanner  = new Scanner(System.in);
         do {

@@ -2,7 +2,7 @@ package ss12.thuc_hanh;
 
 import java.util.Comparator;
 
-public class Compare implements Comparator<Simpson> {
+public class CompareSimpson implements Comparator<Simpson> {
 
     @Override
     public int compare(Simpson o1, Simpson o2) {
