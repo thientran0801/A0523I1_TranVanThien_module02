@@ -11,17 +11,17 @@ public class CheckCircleComparator {
         Circle[] circles = new Circle[3];
         circles[0] = new Circle(3.6);
         circles[1] = new Circle();
-        circles[2] = new Circle(3.5, "red",true);
+        circles[2] = new Circle(3.5, "red", true);
 
         System.out.println("Pre - sorted: ");
-        for (Circle circle: circles) {
+        for (Circle circle : circles) {
             System.out.println(circle);
         }
 
         Comparator circleComparator = new CircleComparator();
         Arrays.sort(circles, circleComparator);
         System.out.println("After - sorted: ");
-        for (Circle circle : circles){
+        for (Circle circle : circles) {
             System.out.println(circle);
         }
     }
