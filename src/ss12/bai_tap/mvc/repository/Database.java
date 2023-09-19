@@ -47,8 +47,12 @@ public class Database implements IDatabase{
     }
 
     @Override
-    public void searchProduct() {
-
+    public void searchProduct(String string) {
+        for (Product product: productArrayList) {
+            if (product.getName().toLowerCase().contains(string.toLowerCase())) {
+                System.out.println(product.getName());
+            }
+        }
     }
 
     @Override

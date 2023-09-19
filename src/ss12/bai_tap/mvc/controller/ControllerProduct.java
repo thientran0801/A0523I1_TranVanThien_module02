@@ -49,10 +49,7 @@ public class ControllerProduct {
                     break;
                 case 5:
                     System.out.println("Search function: ");
-                    System.out.println("which product do you want to search for???");
-                    scanner.nextLine();
-                    String keyWord = scanner.nextLine();
-                    serviceProduct.searchProduct(keyWord);
+                    serviceProduct.searchProduct();
                     break;
                 case 6:
                     System.out.println("Sorting function: ");

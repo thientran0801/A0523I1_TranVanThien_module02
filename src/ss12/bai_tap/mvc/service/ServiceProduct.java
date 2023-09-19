@@ -39,13 +39,12 @@ public class ServiceProduct implements IServiceProduct{
     }
 
     @Override
-    public void searchProduct(String string) {
-        ArrayList<Product> list = database.getProductList();
-        for (Product product: list) {
-            if (product.getName().toLowerCase().contains(string.toLowerCase())) {
-                System.out.println(product.getName());
-            }
-        }
+    public void searchProduct() {
+        System.out.println("which product do you want to search for???");
+//      scanner.nextLine();
+        String keyWord = scanner.nextLine();
+        database.searchProduct(keyWord);
+
     }
 
     @Override

@@ -8,7 +8,7 @@ public interface IDatabase {
     void addProduct(Product product);
     void updateProduct(int idUpdate);
     ArrayList<Product> getProductList();
-    void searchProduct();
+    void searchProduct(String string);
     void deleteProduct(int idDelete);
     void sortingProduct(int choice);
 }

@@ -4,7 +4,7 @@ public interface IServiceProduct {
     void addProduct();
     void updateProduct();
     void displayProductList();
-    void searchProduct(String string);
+    void searchProduct();
     void deleteProduct();
     void sortingProduct();
 }
