@@ -1,6 +1,5 @@
 package ss06.thuc_hanh;
 
-import org.omg.CORBA.StringHolder;
 
 public class Shape {
     private String color;
