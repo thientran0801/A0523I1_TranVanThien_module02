@@ -1,5 +1,6 @@
 package ss13.bai_tap;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class FindStringAscendingLongest {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a string: ");
         String string = scanner.nextLine();
-                LinkedList<Character> max = new LinkedList<>();
+                ArrayList<Character> max = new ArrayList<>();
 
 
                 for (int i = 0; i < string.length(); i++) {

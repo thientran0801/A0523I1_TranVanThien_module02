@@ -2,7 +2,7 @@ package CaseStudy2.model;
 
 public abstract class Person {
 
-    private String name, gender, dob, email, id, mail;
+    private String name, gender, dob, email, id, mail;//-	Mã nhân viên phải đúng định dạng: NV-YYYY, với YYYY là các số từ 0-9.
     private int  phoneNumber, idCard;
 
     public Person() {

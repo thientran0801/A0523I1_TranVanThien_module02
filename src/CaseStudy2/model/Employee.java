@@ -3,6 +3,7 @@ package CaseStudy2.model;
 public class Employee extends Person{
     private String level, position;
     private int salary;
+    //-	Mã nhân viên phải đúng định dạng: NV-YYYY, với YYYY là các số từ 0-9.
     //Trình độ : Trung cấp, Cao đẳng, Đại học và Sau đại học
     //Vị trí: lễ tân, phục vụ, chuyên viên, giám sát, quản lý, giám đốc.
 

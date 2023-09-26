@@ -1,19 +1,14 @@
 package CaseStudy2.model;
 
-public class House extends Facility{
+public class House extends Facility {
     private int numberOfFloor;
     private String roomStandard;
 
     public House() {
     }
 
-    public House(int numberOfFloor, String roomStandard) {
-        this.numberOfFloor = numberOfFloor;
-        this.roomStandard = roomStandard;
-    }
-
-    public House(String serviceCode, String name, int acreage, int expense, int maxPerson, String rentalType, int numberOfFloor, String roomStandard) {
-        super(serviceCode, name, acreage, expense, maxPerson, rentalType);
+    public House(String serviceCode, String serviceName, int acreage, int expense, int maxPerson, String rentalType, int numberOfFloor, String roomStandard) {
+        super(serviceCode, serviceName, acreage, expense, maxPerson, rentalType);
         this.numberOfFloor = numberOfFloor;
         this.roomStandard = roomStandard;
     }
