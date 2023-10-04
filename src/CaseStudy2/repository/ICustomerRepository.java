@@ -1,5 +1,9 @@
 package CaseStudy2.repository;
 
-public interface ICustomerRepository {
-    void edit();
+import CaseStudy2.model.Customer;
+
+import java.util.List;
+
+public interface ICustomerRepository extends IRepository<Customer> {
+    void edit(List<Customer> list);
 }

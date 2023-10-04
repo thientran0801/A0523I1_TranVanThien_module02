@@ -10,4 +10,9 @@ public class ContractService implements IContractService{
     public void displayList() {
 
     }
+
+    @Override
+    public void createNewContract() {
+
+    }
 }

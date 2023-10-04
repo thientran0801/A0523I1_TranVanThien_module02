@@ -1,7 +1,5 @@
 package CaseStudy2.repository;
 
-public interface IContractRepository {
-    void createnew();
+public interface IContractRepository extends IRepository{
     void edit();
-    void displayListContract();
 }

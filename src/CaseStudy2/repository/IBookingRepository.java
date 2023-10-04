@@ -1,7 +1,6 @@
 package CaseStudy2.repository;
 
-public interface IBookingRepository {
-    void createnew();
-    void edit();
-    void displayListContract();
+import CaseStudy2.model.Booking;
+
+public interface IBookingRepository extends IRepository<Booking>{
 }

@@ -12,11 +12,12 @@ public class StudentController {
         boolean flag=true;
         do {
             System.out.println("Chọn chức năng :");
-            System.out.println("1.Display" +
+            System.out.println("1.Display by name and id" +
                     "\n 2.Add" +
                     "\n 3.Edit" +
                     "\n 4.Delete" +
-                    "\n 5.Exit"
+                    "\n 5.Search by name" +
+                    "\n 6.Exit"
             );
             int choose = Integer.parseInt(scanner.nextLine());
             switch (choose){
@@ -34,6 +35,10 @@ public class StudentController {
                 case 4:
                     System.out.println("Code chức năng xoá");
                     studentService.delete();
+                    break;
+                case 5:
+                    System.out.println("Code chức năng xoá");
+                    studentService.searchByName();
                     break;
                 default:
                     flag = false;
