@@ -1,7 +1,6 @@
 package ss16.bai_tap;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +13,10 @@ public class ReadFile {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
-                String[] array = line.split(",");
-                Country country= new Country(Integer.parseInt(array[0]), array[1], array[2]);
-                list.add(country);
+//                String[] array = line.split(",");
+//                Country country= new Country(Integer.parseInt(array[0]), array[1], array[2]);
+//                list.add(country);
+                System.out.println(line);
             }
             bufferedReader.close();
         } catch (IOException e) {
