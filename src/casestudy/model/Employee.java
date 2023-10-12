@@ -2,12 +2,9 @@ package casestudy.model;
 
 public class Employee extends Person {
     private String level, position;
-    private int salary;
+    private double salary;
 
-    //-	Mã nhân viên phải đúng định dạng: NV-YYYY, với YYYY là các số từ 0-9.
-    //Trình độ : Trung cấp, Cao đẳng, Đại học và Sau đại học
-    //Vị trí: lễ tân, phục vụ, chuyên viên, giám sát, quản lý, giám đốc.
-    public Employee(String id, String name, String dob, String gender, String idCard, String phoneNumber, String email, String level, String position, int salary) {
+    public Employee(String id, String name, String dob, String gender, String idCard, String phoneNumber, String email, String level, String position, double salary) {
         super(id, name, dob, gender, idCard, phoneNumber, email);
         this.level = level;
         this.position = position;
@@ -30,11 +27,11 @@ public class Employee extends Person {
         this.position = position;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 

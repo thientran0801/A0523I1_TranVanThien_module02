@@ -1,7 +1,9 @@
 package casestudy.service;
 
-public interface IBookingService extends IService{
-    void createnew();
-    void edit();
+public interface IBookingService extends IService {
+    void createNewContract();
+
+    void editContract();
+
     void displayListContract();
 }

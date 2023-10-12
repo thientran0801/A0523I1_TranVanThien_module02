@@ -1,5 +1,10 @@
 package casestudy.repository;
 
-public interface IFacilityRepository extends IRepository{
-    void displayListMaintenance();
+import casestudy.model.Facility;
+
+import java.util.Map;
+
+public interface IFacilityRepository{
+    public void add(Facility facility);
+    public Map<Facility,Integer> getList();
 }

@@ -2,7 +2,7 @@ package casestudy.model;
 
 public abstract class Person {
 
-    private String id, name, dob, gender, idCard, phoneNumber, email;//-	Mã phải đúng định dạng: NV-YYYY, với YYYY là các số từ 0-9.
+    private String id, name, dob, gender, idCard, phoneNumber, email;
 
     public Person(String id, String name, String dob, String gender, String idCard, String phoneNumber, String email) {
         this.name = name;

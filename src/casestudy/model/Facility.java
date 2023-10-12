@@ -1,17 +1,14 @@
 package casestudy.model;
 
 public abstract class Facility {
-    private String serviceCode;
-    private String serviceName;
-    private int acreage;
-    private int expense;
+    private String serviceCode, serviceName, rentalType;
+    private double acreage, expense;
     private int maxPerson;
-    private String rentalType;
 
     public Facility() {
     }
 
-    public Facility(String serviceCode, String serviceName, int acreage, int expense, int maxPerson, String rentalType) {
+    public Facility(String serviceCode, String serviceName, double acreage, double expense, int maxPerson, String rentalType) {
         this.serviceCode = serviceCode;
         this.serviceName = serviceName;
         this.acreage = acreage;
@@ -36,7 +33,7 @@ public abstract class Facility {
         this.serviceName = serviceName;
     }
 
-    public int getAcreage() {
+    public double getAcreage() {
         return acreage;
     }
 
@@ -44,7 +41,7 @@ public abstract class Facility {
         this.acreage = acreage;
     }
 
-    public int getExpense() {
+    public double getExpense() {
         return expense;
     }
 
